@@ -30,6 +30,10 @@ namespace NationalCookies.Data.Services
 
             //first, try to get cookies from cache
             var cachedCookies = _cache.GetString("cookies");
+
+
+            
+
             if (!string.IsNullOrEmpty(cachedCookies)){
 
                 //if they are there, deserialize them
@@ -41,7 +45,9 @@ namespace NationalCookies.Data.Services
                 cookies = _context.Cookies.ToList();
 
                 DistributedCacheEntryOptions options = new DistributedCacheEntryOptions();
-                options.SetAbsoluteExpiration(new System.TimeSpan(0, 0, 15));
+                options.SetAbsoluteExpiration(new System.TimeSpan(0, 10, 15));
+
+                // options.SlidingExpiration
 
                 //and then, put them in cache
                 _cache.SetString("cookies", JsonConvert.SerializeObject(cookies), options);
