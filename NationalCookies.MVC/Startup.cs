@@ -39,6 +39,7 @@ namespace NationalCookies
                 option.InstanceName = "master";
             });
 
+            // JAD: This is examples of registrations:
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<ICookieService, CookieService>();
 

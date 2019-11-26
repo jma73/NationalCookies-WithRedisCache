@@ -20,12 +20,13 @@ namespace NationalCookies.Data.Services
         public List<Cookie> GetAllCookies()
         {
             List<Cookie> cookies;
-            
+
             //if no cache is passed into the constructor
             //of this service, just get the cookies from the database and return them
-            if(_cache == null)
+            // todo jad 26/11-2019: virker umiddelbart kun fra MVC projektet og ikke fra Forms... (why?).
+            if (_cache == null)
             {
-                return cookies = _context.Cookies.ToList();                
+                return cookies = _context.Cookies.ToList();
             }
 
             //first, try to get cookies from cache
@@ -45,7 +46,7 @@ namespace NationalCookies.Data.Services
                 cookies = _context.Cookies.ToList();
 
                 DistributedCacheEntryOptions options = new DistributedCacheEntryOptions();
-                options.SetAbsoluteExpiration(new System.TimeSpan(0, 10, 15));
+                options.SetAbsoluteExpiration(new System.TimeSpan(0, 10, 15));      // default værdi var 0 0 15.
 
                 // options.SlidingExpiration
 
