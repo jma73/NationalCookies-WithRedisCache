@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalCookies.Data", "NationalCookies.Data\NationalCookies.Data.csproj", "{5574D827-4D97-4B94-B194-332C2F34E6F4}"
 EndProject
@@ -10,6 +10,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalCookies.Forms", "NationalCookies.Forms\NationalCookies.Forms.csproj", "{1DB7401D-CFE1-4FD7-8AC5-380A324B4E5A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationalCookies.MVC", "NationalCookies.MVC\NationalCookies.MVC.csproj", "{4750FEA8-ACFE-4C8D-B714-6FD214BAF36B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BridgeUuid", "BridgeUuid\BridgeUuid.csproj", "{5320382F-85BA-4696-8680-F47268051C97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bridge", "Bridge", "{80603E5A-872A-4C2E-974A-78314C782FEE}"
+	ProjectSection(SolutionItems) = preProject
+		JadBridge.md = JadBridge.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{013CB8EE-1932-4FEC-AB7B-A0EB4692383B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,9 +44,21 @@ Global
 		{4750FEA8-ACFE-4C8D-B714-6FD214BAF36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4750FEA8-ACFE-4C8D-B714-6FD214BAF36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4750FEA8-ACFE-4C8D-B714-6FD214BAF36B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5320382F-85BA-4696-8680-F47268051C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5320382F-85BA-4696-8680-F47268051C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5320382F-85BA-4696-8680-F47268051C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5320382F-85BA-4696-8680-F47268051C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{013CB8EE-1932-4FEC-AB7B-A0EB4692383B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013CB8EE-1932-4FEC-AB7B-A0EB4692383B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013CB8EE-1932-4FEC-AB7B-A0EB4692383B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{013CB8EE-1932-4FEC-AB7B-A0EB4692383B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5320382F-85BA-4696-8680-F47268051C97} = {80603E5A-872A-4C2E-974A-78314C782FEE}
+		{013CB8EE-1932-4FEC-AB7B-A0EB4692383B} = {80603E5A-872A-4C2E-974A-78314C782FEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA5B8168-62F1-4194-BA2D-2A4F21B16CF4}
