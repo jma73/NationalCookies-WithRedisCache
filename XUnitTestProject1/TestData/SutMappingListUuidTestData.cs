@@ -10,11 +10,11 @@ using Xunit.Sdk;
 
 namespace XUnitTestProject1.TestData
 {
-    public class UnitTest1
+    public class SutMappingListUuidTestData
     {
         private readonly ITestOutputHelper _testOutputHelper;
 
-        public UnitTest1(ITestOutputHelper testOutputHelper)
+        public SutMappingListUuidTestData(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;
         }
@@ -83,8 +83,11 @@ namespace XUnitTestProject1.TestData
 
             // Arrange
             IMappingListUuidTestData target = new MappingListUuidTestData();
-            string filename = @"C:\jad\source\Pluralsight\NationalCookies-WithCache\BridgeUuid\TestData\mapnigsliste-uuid-jad.csv";
+            //string filename = @"C:\jad\source\Pluralsight\NationalCookies-WithCache\BridgeUuid\TestData\mapnigsliste-uuid-jad.csv";
+            string filename = @"TestData\mapnigsliste-uuid-jad.csv";    // it works!
             
+
+
             // Act
             IDictionary<string, Guid> result = target.GetCacheStub(filename);
 

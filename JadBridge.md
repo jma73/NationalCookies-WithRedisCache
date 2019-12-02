@@ -1,10 +1,18 @@
+Denne fil læses bedst i en MarkDown viewer!
+ - fx.: Extension i VS: MarkDown editor af Mads Kristensen.
+ - 
 
 
 ****Getting started****
 
   - todo:
-    - move away from GitHub (because of keys)
+    - move (this solution) away from GitHub (because of keys)
     - 
+
+**Questions**
+* Database or no database?
+  * kan uuid blot ligge i cachen?
+  * som indlæses fra en fil / fået via ftp.
 
 
 **Tasks**
@@ -22,6 +30,20 @@
 		then we can just use the UUID.
 
 
+ * Create system for loading / refreshing cache
  * 
 
+
+
+**Naming conventions - unittets**
+
+* https://enterprisecraftsmanship.com/posts/you-naming-tests-wrong/
+* [MethodUnderTest]\_[Scenario]\_[ExpectedResult]
+* 
+
+
+
+Markdown syntax:
+__bold__
+_italics_
 
