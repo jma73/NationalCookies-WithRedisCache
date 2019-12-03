@@ -17,7 +17,8 @@ Denne fil læses bedst i en MarkDown viewer!
 
 **Tasks**
 
- * Create "lookup" strategy
+ * Create "lookup" strategy (for looking up in cache)
+   * Fx: prefix?
  * Deceide for Redis: StackExchange or simple.
   * how should keys look like? 
 	"To from xml to UUDI"	
@@ -33,6 +34,16 @@ Denne fil læses bedst i en MarkDown viewer!
  * Create system for loading / refreshing cache
  * 
 
+
+**Testing**
+* Mock objects?
+* Create SUT object??
+* Guidelines?
+* Skal vi ikke bruge Microsoft.Extensions.DependencyInjection
+
+*Spørgsmål til Adam / Logic*
+ * new xxx i Test? Well, det er vist ok!
+ * Bruger de: Microsoft.Extensions.DependencyInjection
 
 
 **Naming conventions - unittets**

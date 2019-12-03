@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using BridgeUuid.TestData;
 
@@ -15,20 +16,29 @@ namespace BridgeUuid
     public class MappingUuid : IMappingUuid
     {
         private IDictionary<string, Guid> _cacheStub;
+        private IMappingListUuidTestData _mappingListUuidTestData;
+        
+        public MappingUuid(IMappingListUuidTestData mappingListUuidTestData)
+        {
+            _mappingListUuidTestData = mappingListUuidTestData;
+            InitializeMappingList();
+        }
 
-
-        //public MappingUuid(IMappingListUuidTestData mappingListUuidTestData)
+        //public MappingUuid()
         //{
             
+
+        //    // todo jad: mangler noget dependency injection!
+        //    InitializeMappingList();
         //}
 
-        public MappingUuid()
+        private void InitializeMappingList()
         {
-            // todo jad: mangler noget dependency injection!!!
-
-            var mappingListUuidTestData = new MappingListUuidTestData();
-            string filename = @"TestData\mapnigsliste-uuid-jad.csv";    // it works!
-            _cacheStub = mappingListUuidTestData.GetCacheStub(filename);
+//var mappingListUuidTestData = new MappingListUuidTestData();        // denne skal vel injectes.
+            string filename = @"TestData\mapnigsliste-uuid-jad.csv"; // it works!
+            //string filename = @""; // it is for mock testing
+            //_cacheStub = mappingListUuidTestData.GetCacheStub(filename);
+            _cacheStub = _mappingListUuidTestData.GetCacheStub(filename);
         }
 
         public Guid GetUuid(string key)

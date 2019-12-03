@@ -38,8 +38,8 @@ namespace BridgeUuid.TestData
                     try
                     {
 
-                        KeyValuePair<string, Guid> sssKeyValuePair = new KeyValuePair<string, Guid>(key, new Guid(value));
-                        cacheDictionary.Add(sssKeyValuePair);
+                        KeyValuePair<string, Guid> keyValuePair = new KeyValuePair<string, Guid>(key, new Guid(value));
+                        cacheDictionary.Add(keyValuePair);
 
                     }
                     catch (FormatException e)   // avoid problems when not enough data. Fx. no Guid.
